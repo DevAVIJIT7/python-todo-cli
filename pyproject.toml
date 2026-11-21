@@ -8,12 +8,16 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "google-auth>=2.63.0",
+    "google-auth-oauthlib>=1.5.0",
+    "gspread>=6.2.1",
     "rich>=15.0.0",
     "typer>=0.27.2",
 ]
 
 [project.scripts]
 todo = "cli_todo.main:app"
+budget = "google_sheet.cli:app"
 [build-system]
 requires = ["uv_build>=0.12.7,<0.13.0"]
 build-backend = "uv_build"
